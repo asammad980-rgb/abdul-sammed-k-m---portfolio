@@ -1,51 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="Abdul Sammed K M - Odoo Developer, AI & ML Enthusiast">
-
+    <meta name="description" content="Abdul Sammed K M - Odoo Developer, AI & ML Enthusiast">
     <title>Abdul Sammed K M | Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header class="hero" id="home">
+    <!-- Ambient Background Effects -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
 
-        <nav class="navbar">
-            <div class="container nav-container">
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">SAMMED<span>.</span></a>
 
-                <h2 class="logo">SAMMED<span>.</span></h2>
-
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#contact">Contact</a>
-                </div>
-
+            <div class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
-        </nav>
 
-        <div class="container hero-content">
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero" id="home">
+        <div class="container hero-grid">
 
             <div class="hero-text">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    <span>Open to Internships &amp; Opportunities</span>
+                </div>
 
                 <p class="subtitle">HELLO, I'M</p>
 
                 <h1>
-                    Abdul Sammed K M
+                    Abdul Sammed <span class="gradient-text">K M</span>
                 </h1>
 
                 <h2>
-                    Odoo Developer <span>|</span> AI & ML Enthusiast
+                    Odoo Developer <span class="divider">|</span> AI &amp; ML Enthusiast
                 </h2>
 
                 <p class="hero-description">
@@ -55,109 +71,129 @@
                 </p>
 
                 <div class="hero-buttons">
-
                     <a href="#projects" class="btn primary-btn">
-                        View Projects
+                        <span>View Projects</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
                     </a>
 
-                    <a href="ABDUL_SAMMED_CV.pdf"
-                       class="btn secondary-btn"
-                       download>
-                        Download CV
+                    <a href="ABDUL_SAMMED_CV.pdf" class="btn secondary-btn" download>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download CV</span>
                     </a>
-
                 </div>
+            </div>
 
+            <!-- Developer Profile Window -->
+            <div class="hero-visual">
+                <div class="code-card">
+                    <div class="code-card-header">
+                        <div class="window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="file-name">developer_profile.py</span>
+                    </div>
+                    <pre class="code-body"><code><span class="kw">class</span> <span class="cls">Developer</span>:
+    <span class="prop">name</span> <span class="op">=</span> <span class="str">"Abdul Sammed K M"</span>
+    <span class="prop">degree</span> <span class="op">=</span> <span class="str">"B.Tech CSE"</span>
+    <span class="prop">focus</span> <span class="op">=</span> [
+        <span class="str">"Odoo Development"</span>,
+        <span class="str">"AI &amp; Machine Learning"</span>,
+        <span class="str">"Data Analytics"</span>,
+        <span class="str">"Generative AI"</span>
+    ]
+    <span class="prop">stack</span> <span class="op">=</span> (<span class="str">"Python"</span>, <span class="str">"PostgreSQL"</span>, <span class="str">"SQL"</span>)
+
+    <span class="kw">def</span> <span class="fn">status</span>(<span class="arg">self</span>):
+        <span class="kw">return</span> <span class="str">"Building custom ERP &amp; AI"</span></code></pre>
+                </div>
             </div>
 
         </div>
-
     </header>
-
 
     <!-- ================= ABOUT ================= -->
     <section id="about" class="section">
-
         <div class="container">
 
-            <p class="section-label">01 — ABOUT ME</p>
-
-            <h2 class="section-title">
-                About Me
-            </h2>
+            <div class="section-header reveal">
+                <p class="section-label">01 — ABOUT ME</p>
+                <h2 class="section-title">About Me</h2>
+            </div>
 
             <div class="about-content">
-
-                <div class="about-text">
-
+                <div class="about-text reveal">
                     <p>
                         I am Abdul Sammed K M, a Computer Science Engineering
                         student and aspiring Odoo Developer with an interest
                         in Artificial Intelligence and Machine Learning.
                     </p>
-
                     <p>
                         I have practical experience working with Python,
                         SQL, PostgreSQL, Odoo, Machine Learning, Deep Learning,
                         Generative AI and Data Analytics.
                     </p>
-
                     <p>
                         Currently, I am focusing on developing my Odoo
                         development skills by building custom modules and
                         learning Odoo models, fields, ORM, views, security,
                         PostgreSQL and business workflows.
                     </p>
-
                 </div>
 
-                <div class="about-card">
-
+                <div class="about-card reveal">
+                    <div class="card-accent-top"></div>
                     <div class="info-item">
                         <span>Education</span>
                         <strong>B.Tech CSE</strong>
                     </div>
-
                     <div class="info-item">
                         <span>Primary Focus</span>
                         <strong>Odoo Development</strong>
                     </div>
-
                     <div class="info-item">
                         <span>Programming</span>
-                        <strong>Python & SQL</strong>
+                        <strong>Python &amp; SQL</strong>
                     </div>
-
                     <div class="info-item">
                         <span>Interests</span>
                         <strong>AI • Data • ERP</strong>
                     </div>
-
                 </div>
-
             </div>
 
         </div>
-
     </section>
 
-
     <!-- ================= SKILLS ================= -->
-    <section id="skills" class="section skills-section">
-
+    <section id="skills" class="section section-alt">
         <div class="container">
 
-            <p class="section-label">02 — SKILLS</p>
-
-            <h2 class="section-title">
-                Technical Skills
-            </h2>
+            <div class="section-header reveal">
+                <p class="section-label">02 — SKILLS</p>
+                <h2 class="section-title">Technical Skills</h2>
+            </div>
 
             <div class="skills-grid">
 
-                <div class="skill-card">
-                    <h3>Programming</h3>
-
+                <div class="skill-card reveal">
+                    <div class="skill-card-head">
+                        <div class="icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Programming</h3>
+                    </div>
                     <div class="skill-tags">
                         <span>Python</span>
                         <span>SQL</span>
@@ -166,10 +202,17 @@
                     </div>
                 </div>
 
-
-                <div class="skill-card">
-                    <h3>Odoo & Database</h3>
-
+                <div class="skill-card reveal">
+                    <div class="skill-card-head">
+                        <div class="icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <h3>Odoo &amp; Database</h3>
+                    </div>
                     <div class="skill-tags">
                         <span>Odoo</span>
                         <span>ORM</span>
@@ -178,10 +221,17 @@
                     </div>
                 </div>
 
-
-                <div class="skill-card">
-                    <h3>AI & Machine Learning</h3>
-
+                <div class="skill-card reveal">
+                    <div class="skill-card-head">
+                        <div class="icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 2a4 4 0 0 1 4 4v2a4 4 0 0 1-8 0V6a4 4 0 0 1 4-4z"></path>
+                                <path d="M16 14H8a4 4 0 0 0-4 4v2h16v-2a4 4 0 0 0-4-4z"></path>
+                                <circle cx="12" cy="6" r="1"></circle>
+                            </svg>
+                        </div>
+                        <h3>AI &amp; Machine Learning</h3>
+                    </div>
                     <div class="skill-tags">
                         <span>Machine Learning</span>
                         <span>Deep Learning</span>
@@ -191,10 +241,17 @@
                     </div>
                 </div>
 
-
-                <div class="skill-card">
-                    <h3>Data & Tools</h3>
-
+                <div class="skill-card reveal">
+                    <div class="skill-card-head">
+                        <div class="icon-box">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="18" y1="20" x2="18" y2="10"></line>
+                                <line x1="12" y1="20" x2="12" y2="4"></line>
+                                <line x1="6" y1="20" x2="6" y2="14"></line>
+                            </svg>
+                        </div>
+                        <h3>Data &amp; Tools</h3>
+                    </div>
                     <div class="skill-tags">
                         <span>Pandas</span>
                         <span>NumPy</span>
@@ -207,271 +264,186 @@
             </div>
 
         </div>
-
     </section>
-
 
     <!-- ================= PROJECTS ================= -->
     <section id="projects" class="section">
-
         <div class="container">
 
-            <p class="section-label">03 — PROJECTS</p>
-
-            <h2 class="section-title">
-                Projects
-            </h2>
+            <div class="section-header reveal">
+                <p class="section-label">03 — PROJECTS</p>
+                <h2 class="section-title">Projects</h2>
+            </div>
 
             <div class="projects-grid">
 
-                <!-- Project 1 -->
-                <div class="project-card">
-
-                    <div class="project-number">
-                        01
+                <!-- Project 1 (Featured full-width card for balanced grid) -->
+                <article class="project-card featured-project reveal">
+                    <div class="project-top">
+                        <span class="project-number">01</span>
+                        <span class="featured-badge">Featured Project</span>
                     </div>
-
-                    <h3>
-                        Hospital Management System (Odoo)
-                    </h3>
-
+                    <h3>Hospital Management System (Odoo)</h3>
                     <p>
                         Custom Odoo ERP module for hospital management,
                         featuring doctor and patient record systems with
                         auto-generated IDs, department management, and
                         document attachment support.
                     </p>
-
                     <div class="project-tags">
                         <span>Odoo</span>
                         <span>Python</span>
                         <span>XML</span>
                         <span>ERP</span>
                     </div>
-
-                </div>
-
+                </article>
 
                 <!-- Project 2 -->
-                <div class="project-card">
-
-                    <div class="project-number">
-                        02
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span class="project-number">02</span>
                     </div>
-
-                    <h3>
-                        AI Powered Medical Assistance
-                    </h3>
-
+                    <h3>AI Powered Medical Assistance</h3>
                     <p>
                         AI-based healthcare assistance project combining
                         Machine Learning, Deep Learning and Generative AI
                         concepts to provide intelligent medical support
                         and insights.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>Machine Learning</span>
                         <span>Deep Learning</span>
                         <span>GenAI</span>
                     </div>
-
-                </div>
-
+                </article>
 
                 <!-- Project 3 -->
-                <div class="project-card">
-
-                    <div class="project-number">
-                        03
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span class="project-number">03</span>
                     </div>
-
-                    <h3>
-                        AI Chatbot
-                    </h3>
-
+                    <h3>AI Chatbot</h3>
                     <p>
                         A Generative AI chatbot capable of understanding
                         user queries and generating contextual responses
                         using a GenAI model.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>Generative AI</span>
                         <span>Gemini</span>
                     </div>
-
-                </div>
-
+                </article>
 
                 <!-- Project 4 -->
-                <div class="project-card">
-
-                    <div class="project-number">
-                        04
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span class="project-number">04</span>
                     </div>
-
-                    <h3>
-                        Fruit Classification
-                    </h3>
-
+                    <h3>Fruit Classification</h3>
                     <p>
                         CNN-based image classification project designed
                         to identify different fruit categories from
                         images.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>TensorFlow</span>
                         <span>CNN</span>
                         <span>Computer Vision</span>
                     </div>
-
-                </div>
-
+                </article>
 
                 <!-- Project 5 -->
-                <div class="project-card">
-
-                    <div class="project-number">
-                        05
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span class="project-number">05</span>
                     </div>
-
-                    <h3>
-                        Diabetes Prediction
-                    </h3>
-
+                    <h3>Diabetes Prediction</h3>
                     <p>
                         Machine Learning project that analyzes patient
                         datasets and predicts diabetes outcomes using
                         classification techniques.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>Pandas</span>
                         <span>Scikit-learn</span>
                         <span>Machine Learning</span>
                     </div>
-
-                </div>
-
+                </article>
 
                 <!-- Project 6 -->
-                <div class="project-card">
-
-                    <div class="project-number">
-                        06
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span class="project-number">06</span>
                     </div>
-
-                    <h3>
-                        Healthcare Analysis
-                    </h3>
-
+                    <h3>Healthcare Analysis</h3>
                     <p>
                         Data analytics project involving healthcare
                         datasets, data exploration, visualization and
                         extraction of useful insights.
                     </p>
-
                     <div class="project-tags">
                         <span>Python</span>
                         <span>Pandas</span>
                         <span>Data Analytics</span>
                         <span>Visualization</span>
                     </div>
-
-                </div>
-
+                </article>
 
                 <!-- Project 7 -->
-                <div class="project-card">
-
-                    <div class="project-number">
-                        07
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span class="project-number">07</span>
                     </div>
-
-                    <h3>
-                        Social Media Engagement Dashboard
-                    </h3>
-
+                    <h3>Social Media Engagement Dashboard</h3>
                     <p>
                         Interactive dashboard designed to analyze social
                         media engagement metrics, trends and performance.
                     </p>
-
                     <div class="project-tags">
                         <span>Data Analytics</span>
                         <span>Dashboard</span>
                         <span>Visualization</span>
                     </div>
-
-                </div>
+                </article>
 
             </div>
 
         </div>
-
     </section>
 
-
     <!-- ================= EXPERIENCE ================= -->
-    <section id="experience" class="section experience-section">
-
+    <section id="experience" class="section section-alt">
         <div class="container">
 
-            <p class="section-label">04 — EXPERIENCE</p>
-
-            <h2 class="section-title">
-                Experience & Learning
-            </h2>
+            <div class="section-header reveal">
+                <p class="section-label">04 — EXPERIENCE</p>
+                <h2 class="section-title">Experience &amp; Learning</h2>
+            </div>
 
             <div class="timeline">
 
-
-                <div class="experience-card">
-
-                    <div class="experience-number">
-                        01
-                    </div>
-
-                    <div>
-                        <h3>
-                            Corizo
-                        </h3>
-
-                        <h4>
-                            Machine Learning Training
-                        </h4>
-
+                <div class="experience-item reveal">
+                    <div class="timeline-marker">01</div>
+                    <div class="experience-card">
+                        <h3>Corizo</h3>
+                        <h4>Machine Learning Training</h4>
                         <p>
                             Completed foundational Machine Learning
                             training with practical exposure to ML
                             concepts and projects.
                         </p>
                     </div>
-
                 </div>
 
-
-                <div class="experience-card">
-
-                    <div class="experience-number">
-                        02
-                    </div>
-
-                    <div>
-                        <h3>
-                            Odoo Development
-                        </h3>
-
-                        <h4>
-                            Practical Development & Learning
-                        </h4>
-
+                <div class="experience-item reveal">
+                    <div class="timeline-marker">02</div>
+                    <div class="experience-card">
+                        <h3>Odoo Development</h3>
+                        <h4>Practical Development &amp; Learning</h4>
                         <p>
                             Hands-on development of custom Odoo modules
                             with practical learning in models, fields,
@@ -479,147 +451,184 @@
                             menus, security and PostgreSQL.
                         </p>
                     </div>
-
                 </div>
 
-
-                <div class="experience-card">
-
-                    <div class="experience-number">
-                        03
-                    </div>
-
-                    <div>
-                        <h3>
-                            Codec Technologies
-                        </h3>
-
-                        <h4>
-                            Data Analytics Internship
-                        </h4>
-
+                <div class="experience-item reveal">
+                    <div class="timeline-marker">03</div>
+                    <div class="experience-card">
+                        <h3>Codec Technologies</h3>
+                        <h4>Data Analytics Internship</h4>
                         <p>
                             Completed an online Data Analytics internship
                             involving practical projects, data analysis
                             and project submissions.
                         </p>
                     </div>
-
                 </div>
 
-
-                <div class="experience-card">
-
-                    <div class="experience-number">
-                        04
-                    </div>
-
-                    <div>
-                        <h3>
-                            Asquare Technologies
-                        </h3>
-
-                        <h4>
-                            Generative AI Internship
-                        </h4>
-
+                <div class="experience-item reveal">
+                    <div class="timeline-marker">04</div>
+                    <div class="experience-card">
+                        <h3>Asquare Technologies</h3>
+                        <h4>Generative AI Internship</h4>
                         <p>
                             Worked with Generative AI concepts and
                             practical project development during the
                             internship.
                         </p>
                     </div>
-
                 </div>
 
-
             </div>
 
         </div>
-
     </section>
-
 
     <!-- ================= CONTACT ================= -->
-    <section id="contact" class="section contact-section">
-
+    <section id="contact" class="section">
         <div class="container">
 
-            <p class="section-label">05 — CONTACT</p>
+            <div class="contact-wrapper reveal">
+                <div class="section-header">
+                    <p class="section-label">05 — CONTACT</p>
+                    <h2 class="section-title">Let's Connect</h2>
+                    <p class="contact-description">
+                        I am open to internships, fresher opportunities,
+                        collaborations and projects where I can learn,
+                        contribute and grow.
+                    </p>
+                </div>
 
-            <h2 class="section-title">
-                Let's Connect
-            </h2>
+                <div class="contact-links">
+                    <a href="mailto:asammad980@gmail.com" class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-meta">
+                            <span>Email</span>
+                            <strong>asammad980@gmail.com</strong>
+                        </div>
+                    </a>
 
-            <p class="contact-description">
-                I am open to internships, fresher opportunities,
-                collaborations and projects where I can learn,
-                contribute and grow.
-            </p>
+                    <a href="https://github.com/asammad980-rgb" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                            </svg>
+                        </div>
+                        <div class="contact-meta">
+                            <span>GitHub</span>
+                            <strong>View Profile &rarr;</strong>
+                        </div>
+                    </a>
 
+                    <a href="https://www.linkedin.com/in/abdul-sammed-04508037b?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-meta">
+                            <span>LinkedIn</span>
+                            <strong>View Profile &rarr;</strong>
+                        </div>
+                    </a>
+                </div>
 
-            <div class="contact-links">
-
-                <a href="mailto:asammad980@gmail.com"
-                   class="contact-item">
-
-                    <span>Email</span>
-                    <strong>asammad980@gmail.com</strong>
-
-                </a>
-
-
-                <!-- Replace with your actual GitHub URL -->
-                <a href="https://github.com/asammad980-rgb"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="contact-item">
-
-                    <span>GitHub</span>
-                    <strong>View Profile →</strong>
-
-                </a>
-
-
-                <!-- Replace with your actual LinkedIn URL -->
-                <a href="https://www.linkedin.com/in/abdul-sammed-04508037b?utm_source=share_via&utm_content=profile&utm_medium=member_android"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="contact-item">
-
-                    <span>LinkedIn</span>
-                    <strong>View Profile →</strong>
-
-                </a>
-
+                <div class="contact-cta">
+                    <a href="ABDUL_SAMMED_CV.pdf" class="btn primary-btn" download>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download My CV</span>
+                    </a>
+                </div>
             </div>
 
-
-            <a href="ABDUL_SAMMED_CV.pdf"
-               class="btn primary-btn cv-bottom"
-               download>
-                Download My CV
-            </a>
-
         </div>
-
     </section>
-
 
     <!-- ================= FOOTER ================= -->
     <footer>
-
-        <div class="container">
-
-            <p>
-                © 2026 Abdul Sammed K M. All Rights Reserved.
-            </p>
-
+        <div class="container footer-content">
+            <p>&copy; 2026 Abdul Sammed K M. All Rights Reserved.</p>
+            <a href="#home" class="back-to-top">Back to top &uarr;</a>
         </div>
-
     </footer>
 
+    <!-- ================= SCRIPTS ================= -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        const navItems = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('header[id], section[id]');
+
+        // Navbar scroll background
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 30);
+        });
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            menuToggle.classList.toggle('open', isOpen);
+            menuToggle.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close mobile menu when clicking a link
+        navItems.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                menuToggle.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Active navigation link on scroll
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    navItems.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+                    });
+                }
+            });
+        }, {
+            rootMargin: '-40% 0px -55% 0px'
+        });
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // Scroll reveal animation
+        const revealElements = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        } else {
+            revealElements.forEach(el => el.classList.add('visible'));
+        }
+    </script>
 
 </body>
+
 </html>
-```
